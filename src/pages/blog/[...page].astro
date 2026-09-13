@@ -15,7 +15,10 @@ import { type GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 export const getStaticPaths = (async ({paginate}) => {
     const blog = await getCollection("blog");
-    const blogWithReadingTime = blog.map((article) => ({
+    const sortedBlog = blog.sort(
+        (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
+    );
+    const blogWithReadingTime = sortedBlog.map((article) => ({
         ...article,
         readingTime: getReadingTime(article.body ?? "")
     }));
