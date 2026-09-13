@@ -1,19 +1,23 @@
 - id: 1
   title: Tools
   items:
-    - Go
-    - Python
-    - TypeScript
+    - C#
+    - VB.NET
     - SQL
-    - AWS
-    - Docker
-    - PostgreSQL
+    - HTML
+    - CSS
+    - JavaScript
+    - ASP.NET / ASP.NET Core
+    - Entity Framework
+    - XAML
+    - IIS
 - id: 2
   title: Skills
   items:
-    - Distributed Systems
+    - Desktop app development (WinForms/WPF)
     - REST/gRPC APIs
-    - Scalability
-    - Unit/integration/E2E testing
-    - Ethereum, EVM, smart contracts
-    - Code reviews, documentation
+    - Database design & optimisation
+    - Debugging & troubleshooting
+    - Legacy system maintenance
+    - Website development & deployment
+    - UI/UX design (CSS)
