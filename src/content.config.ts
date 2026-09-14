@@ -24,7 +24,7 @@ const blog = defineCollection({
     schema: z.object({
         id: z.number(),
         slug: z.string().max(50),
-        title: z.string().max(50),
+        title: z.string().max(80),
         publishedDate: z.date(),
         category: z.enum(["coding", "tutorials", "career", "tools-workflow", "notes"]), // change and add blog categories here
         readingTime: z.number().optional(),
