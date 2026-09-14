@@ -1,15 +1,15 @@
 ---
 id: 1
-slug: "lessons-from-building-resilient-systems"
-title: "Lessons from building resilient systems"
-publishedDate: 2026-03-03
-category: "notes"
+slug: "football-kit-tool-wpf-nightmare"
+title: "Football Kit Tool: when a WPF nightmare turns into an invaluable experience"
+publishedDate: 2026-09-14
+category: "career"
 isDraft: true
 ---
 
-There is a [particular](https://astro.build) kind of confidence that comes from shipping something and watching it hold up. Not because you anticipated every failure, but because you built it knowing failures would come. Resilient systems are not accident-free systems. They are systems that absorb accidents gracefully.
+The feeling of finally developing your own app is incomparable; especially for us professional developers, who argue on occasion, fail to find common ground and usually either reach the same conclusion from completely unrelated paths, or face an impasse – for people like me, it is refreshing being the master of a project. Don't get me wrong; I learn so much from interacting with peers and I don't intent on giving up. Company ownership over projects and being handed tasks sometimes takes its toll on people. I began experimenting out of pure curiosity, not while searching for a means of escapism.
 
-I have learned most of what I know about resilience the hard way — through outages at inconvenient hours, cascading failures that began with something trivial, and the slow realization that complexity is not a feature you add but a debt you accumulate.
+When I started my first dev job, I'm not ashamed to admit I had little to no developing experience: notably, I hadn't touched Eclipse since 2018; the last Visual Studio edition I had worked on during my studies was VS 2017; Visual Studio Code was my go-to for my university projects; and Notepad++ was my main web development tool – I attempted and failed many times to set up a mock e-shop using Notepad++, Xampp, and whichever database was required by the university at that moment in time. In short, I wasn't up to speed with what .NET devs worked on. Moreover, I was so focused on web development, I hadn't really given much thought to desktop apps. All of that changed once I became employed as a full-stack developer; my skillset skyrocketed thanks to all the hard work I've been putting on and off work all these months.
 
 ## Failure is a design input, not an edge case
 
