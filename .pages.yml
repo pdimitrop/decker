@@ -72,7 +72,10 @@ content:
         type: select
         options:
           values:
-            - Placeholder 1
-            - Placeholder 2
+            - Coding
+            - Tutorials
+            - Career
+            - Tools & Workflow
+            - Notes
       - { name: isDraft, label: Draft, type: boolean, default: true }
       - { name: body, label: Content, type: rich-text }
