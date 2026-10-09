@@ -2,7 +2,7 @@
 id: 2
 slug: "game-of-two-halves-first-wpf-app"
 title: "A Game of Two Halves: How My First WPF App Caught Me Offside"
-publishedDate: 2026-10-02
+publishedDate: 2026-10-09
 category: "coding"
 isDraft: true
 ---
@@ -15,7 +15,23 @@ This post is about what happened next, and where it caught me offside.
 
 ## Kick-Off: Meet the App
 
-.
+Launching the app lands you on an empty stage: two blank kit outlines, accompanied by a list of confœderations on the left, a red square button on the bottom and three rectangular buttons across the top.
+
+![FootballKitTool initial screen](../../assets/images/blog/FootballKitTool0.png)
+
+Each button corresponds to one of three categories: FIFA, Retro, and Non-FIFA, with Retro presented with its own, unique blackletter font as a discreet nod to the past. The neat part is that they come with sound: hovering over a category button plays the sound Pro Evolution Soccer 2008 makes when you move the marker in a menu, and clicking one plays the sound the game makes when you enter a mode or press a dialogue button. It's a minor detail, yet it makes the app feel like one of my favourite PES tites, the video game series that inspired my love for football kits.
+
+By default, the FIFA category is selected, with its list containing FIFA-member associations/fœderations, organised by confœderation (CAF, AFC, UEFA, CONCACAF, OFC, and CONMEBOL) and visible when the corresponding node is expanded. Each country leaf on the tree view shows the country's flag, the country's name in English, and the acronym of its football association in parentheses, for example Hellas (HFF).
+
+![Hellas kits](../../assets/images/blog/FootballKitTool1.png)
+
+By clicking on a country, the kit outlines are filled and labeled as "HOME" and "AWAY", with the selected country's flag now appearing on the bottom left corner of the space.
+
+![FR Yugoslavia kits](../../assets/images/blog/FootballKitTool2.png)
+
+The red square close to the flag is the reset button: it empties the kits and hides the flag and labels, essentially operating as a *deselect* button.
+
+![Christmas Island kits](../../assets/images/blog/FootballKitTool3.png)
 
 ## VAR Check: The Reality of WPF
 
