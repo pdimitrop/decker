@@ -15,27 +15,29 @@ This post is about what happened next, and where it caught me offside.
 
 ## Kick-Off: Meet the App
 
+The app is still in pre-season, so there is no download or source code for now – screenshots will have to do.
+
 Launching the app lands you on an empty stage: two blank kit outlines, accompanied by a list of confœderations on the left, a red square button on the bottom and three rectangular buttons across the top.
 
 ![FootballKitTool initial screen](../../assets/images/blog/FootballKitTool0.png)
 *The app's landing screen: a collapsed tree view on the left and two empty kits on the right.*
 
-Each button corresponds to one of three categories: FIFA, Retro, and Non-FIFA, with Retro presented with its own, unique blackletter font as a discreet nod to the past. The neat part is that they come with sound: hovering over a category button plays the sound Pro Evolution Soccer 2008 makes when you move the marker in a menu, and clicking one plays the sound the game makes when you enter a mode or press a dialogue button. It's a minor detail, yet it makes the app feel like one of my favourite PES tites, the video game series that inspired my love for football kits.
+Each button corresponds to one of three categories: FIFA, Retro, and Non-FIFA, with Retro presented with its own, unique blackletter font as a discreet nod to the past. The neat part is that they come with sound: hovering over a category button plays the sound Pro Evolution Soccer 2008 makes when you move the marker in a menu, and clicking one plays the sound the game makes when you enter a mode or press a dialogue button. It's a minor detail, yet it makes the app feel like one of my favourite PES titles, the video game series that inspired my love for football kits.
 
 By default, the FIFA category is selected, with its list containing FIFA-member associations/fœderations, organised by confœderation (CAF, AFC, UEFA, CONCACAF, OFC, and CONMEBOL) and visible when the corresponding node is expanded. Each country leaf on the tree view shows the country's flag, the country's name in English, and the acronym of its football association in parentheses, for example Hellas (HFF).
 
 ![Hellas kits](../../assets/images/blog/FootballKitTool1.png)
-*The traditional kits of Hellas: all-white home and all-blue away.*
+*The traditional kits of Hellas: all-white home and all-blue away. Hellas is a member of UEFA and, by extension, of FIFA.*
 
-By clicking on a country, the kit outlines are filled and labeled as "HOME" and "AWAY", with the selected country's flag now appearing on the bottom left corner of the space.
+By clicking on a country, the kit outlines are filled and labelled as "HOME" and "AWAY", with the selected country's flag now appearing on the bottom left corner of the space.
 
 ![FR Yugoslavia kits](../../assets/images/blog/FootballKitTool2.png)
-*The kits of FR Yugoslavia (1992–2003): blue jersey, white shorts and red socks at home; white jersey, blue shorts and white socks away.*
+*The kits of FR Yugoslavia: blue jersey, white shorts and red socks at home; white jersey, blue shorts and white socks away. FR Yugoslavia existed between 1992 and 2003, which is why it was placed in the Retro category.*
 
 The red square close to the flag is the reset button: it empties the kits and hides the flag and labels, essentially operating as a *deselect* button.
 
 ![Christmas Island kits](../../assets/images/blog/FootballKitTool3.png)
-*Christmas Island, an Australian external territory in the Indian Ocean, mostly plays friendlies, most notably the Inter-Island Cup against the neighbouring Cocos (Keeling) Islands. Their home kit is a green jersey with blue shorts and socks, while the away kit is all-white.*
+*Christmas Island, an Australian external territory in the Indian Ocean, mostly plays friendlies, most notably the Inter-Island Cup against the neighbouring Cocos (Keeling) Islands. Their home kit is a green jersey with blue shorts and socks, while the away kit is all-white. Christmas Island is a member of neither FIFA nor the Oceanian Football Confœderation (OFC), which is why it sits in the Non-FIFA category.*
 
 ## VAR Check: The Reality of WPF
 
@@ -60,4 +62,10 @@ Every hurdle felt like my whole project was under VAR review. The app did catch 
 
 ## The Final Whistle: What This Project Taught Me
 
-.
+After hustling for the proverbial 90 minutes, we are now in stoppage time, anxiously waiting for the sweet triple sound of the referee's whistle. As I stand on the pitch, ready for the dying moments of this thrilling match, I ponder: what has this adventure taught me? Honestly, the biggest lesson is that a crude solution can still be the right one. A stack of hidden images sitting on top of each other is not what I had imagined, yet it helps me keep every pattern in one place, turning each new entry into a simple matter of copying a structure I've grown fond of.
+
+The arena is quiet, the fans are breathless, the manager's eyes are glimmering… A nasty charge brings my teammate down, face-first. Free kick: a delay in the game and a perfect excuse to think. While the warriors around me are tense, at each other's throats, I ask myself: was WPF worth it? For a project like this one, yes, but not in general: the combination of XAML and C# is far more complicated than WinForms, and the sheer volume of XAML lines the app has accumulated is the price I paid. If I had to do it all over again, the first thing I would redo is the team selection logic. Instead of adding every team to a tree view by hand, I would store all the information in a table and add filters to narrow the entries down.
+
+The final whistle has not blown yet. Football Kit Tool is still under construction: first I will finish the national teams, then move on to a "Club Mode" that replaces the lists of national teams with clubs, working exactly the same way. With that many more entries, Club Mode is where the table-and-filters idea may finally emerge like a "super sub": the player who comes off the bench late in the game, yet makes all the difference.
+
+Consider this post the "full time": we have played the whole 90 minutes, drawn against our fearsome opponents, and are getting ready for extra time. The next post will be about another project, but stay tuned: I aim to have the national teams fully operational by the end of this year.
