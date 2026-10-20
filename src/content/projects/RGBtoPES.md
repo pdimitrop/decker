@@ -7,5 +7,5 @@ github: "https://github.com/pdimitrop/RGBtoPESConverter"
 description: "RGB to PES Converter is a lightweight C# console tool for converting RGB colour values (0–255) to Pro Evolution Soccer (PES) format (0–63)."
 isFeatured: true
 isDraft: false
-aiFree: true
+authorship: human
 ---

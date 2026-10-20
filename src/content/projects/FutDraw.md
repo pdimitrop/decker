@@ -6,5 +6,5 @@ year: "2025"
 description: "A desktop app for simulating association football tournament draws."
 isFeatured: true
 isDraft: false
-aiFree: true
+authorship: human
 ---

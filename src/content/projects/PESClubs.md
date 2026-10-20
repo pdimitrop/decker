@@ -6,5 +6,5 @@ year: "2025"
 description: "A tool for browsing real-life football clubs and their unlicensed Pro Evolution Soccer (PES) counterparts, specifically the fake logos and names."
 isFeatured: true
 isDraft: false
-aiFree: true
+authorship: human
 ---

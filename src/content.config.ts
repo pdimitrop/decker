@@ -17,6 +17,7 @@ const projects = defineCollection({
         isFeatured: z.boolean(),
         isDraft: z.boolean(),
         aiFree: z.boolean().default(false)
+        authorship: z.enum(["human", "assisted"]).optional()
     })
 });
 
