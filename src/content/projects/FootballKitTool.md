@@ -6,4 +6,5 @@ year: "2025"
 description: "A desktop app (WPF) for identifying the traditional home and away kits of national football teams, spread across three categories: FIFA members, retro, and non-FIFA national teams. Built as an experiment on WPF apps."
 isFeatured: true
 isDraft: false
+aiFree: true
 ---

@@ -1,0 +1,18 @@
+---
+const { label = "Human-made" } = Astro.props;
+---
+<span class="ai-free-badge" title="Written by hand. Not vibe-coded, with no AI code generation.">
+  {label}
+</span>
+
+<style>
+  .ai-free-badge {
+    display: inline-block;
+    padding: 0.1rem 0.5rem;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+</style>

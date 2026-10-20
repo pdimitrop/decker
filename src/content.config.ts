@@ -15,7 +15,8 @@ const projects = defineCollection({
         github: z.url().optional(),
         description: z.string().max(350),
         isFeatured: z.boolean(),
-        isDraft: z.boolean()
+        isDraft: z.boolean(),
+        aiFree: z.boolean().default(false)
     })
 });
 
