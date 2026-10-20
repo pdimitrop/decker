@@ -2,9 +2,9 @@
 id: 2
 slug: "game-of-two-halves-first-wpf-app"
 title: "A Game of Two Halves: How My First WPF App Caught Me Offside"
-publishedDate: 2026-10-18
+publishedDate: 2026-10-20
 category: "coding"
-isDraft: true
+isDraft: false
 ---
 
 Football Kit Tool is more than a kit catalogue: it is the ultimate dream for football nostalgia lovers. It's a fully AI-free WPF desktop app for visually identifying the traditional home and away kits of national teams, split into three categories: FIFA members, retro, and non-FIFA teams.
