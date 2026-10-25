@@ -9,7 +9,7 @@ const filled = level === "Native" ? steps.length : steps.indexOf(level) + 1;
 ---
 
 <div class="flex flex-row flex-wrap items-center justify-between gap-x-16 gap-y-8">
-    <Text variant={'normal'}>{name}</Text>
+    <Text variant={'normal'} class="text-base-100">{name}</Text>
     <div class="flex flex-row items-center gap-16">
         <Text variant={'sm'} class="text-base-500 w-48 text-right">{level}</Text>
         <div class="flex flex-row gap-4" role="img" aria-label={`Proficiency: ${level}`}>

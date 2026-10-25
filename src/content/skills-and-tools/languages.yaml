@@ -1,6 +1,7 @@
 - id: 1
   name: Hellenic/Greek
   level: Native
+  certification: "High School Diploma"
 - id: 2
   name: English
   level: C2
@@ -18,7 +19,7 @@
   certification: "Certificate of attendance, Università per Stranieri di Perugia"
 - id: 6
   name: Serbo-Croatian (Serbian, Croatian, Bosnian, Montenegrin)
-  level: B2
+  level: B1
   certification: "Certificate of attendance, Croaticum summer school of Croatian language and culture, Croaticum – Centre for Croatian as a secondary and foreign language, Department for Croatian Language and Literature, Faculty of Humanities and Social Sciences, University of Zagreb"
 - id: 7
   name: Bulgarian
