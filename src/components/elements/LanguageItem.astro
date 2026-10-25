@@ -1,0 +1,33 @@
+---
+import Ribbon from "../../assets/icons/Ribbon.astro";
+import Text from "../elements/Text.astro";
+
+const { name, level, certification } = Astro.props;
+
+const steps = ["A1", "A2", "B1", "B2", "C1", "C2"];
+const filled = level === "Native" ? steps.length : steps.indexOf(level) + 1;
+---
+
+<div class="flex flex-row flex-wrap items-center justify-between gap-x-16 gap-y-8">
+    <Text variant={'normal'}>{name}</Text>
+    <div class="flex flex-row items-center gap-16">
+        <Text variant={'sm'} class="text-base-500 w-48 text-right">{level}</Text>
+        <div class="flex flex-row gap-4" role="img" aria-label={`Proficiency: ${level}`}>
+            {steps.map((_, i) => (
+                <span class:list={["block w-16 h-8", i < filled ? "bg-base-400" : "bg-base-900"]}></span>
+            ))}
+        </div>
+        {certification ? (
+            <div class="relative group flex items-center text-base-300"
+                 tabindex="0" role="img" aria-label={`Certified: ${certification}`}>
+                <Ribbon width={20} height={20} />
+                <div role="tooltip"
+                     class="hidden group-hover:block group-focus:block absolute bottom-full right-0 mb-8 z-10 w-max max-w-xs p-8 bg-base-950 border-2 border-base-700 text-base-100">
+                    <Text variant={'sm'}>{certification}</Text>
+                </div>
+            </div>
+        ) : (
+            <div class="w-[20px] h-[20px]" aria-hidden="true"></div>
+        )}
+    </div>
+</div>

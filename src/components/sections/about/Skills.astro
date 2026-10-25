@@ -3,10 +3,13 @@
 import Section from "../../elements/Section.astro";
 import Tag from "../../elements/Tag.astro";
 import Text from "../../elements/Text.astro";
+import LanguageItem from "../../elements/LanguageItem.astro";
+import Ribbon from "../../../assets/icons/Ribbon.astro";
 
 // content collection
 import { getCollection } from "astro:content";
 const skillsAndTools = await getCollection("skillsAndTools");
+const languages = await getCollection("languages");
 
 
 ---
@@ -32,4 +35,22 @@ const skillsAndTools = await getCollection("skillsAndTools");
             </div>
         ))
     }
+    <div class="border-2 border-base-900">
+        <div class="bg-base-900 p-16 flex flex-row flex-wrap items-center justify-between gap-16">
+            <Text variant={'lg'}>Languages</Text>
+            <div class="flex flex-row gap-8 items-center text-base-300">
+                <Ribbon width={20} height={20} />
+                <Text variant={'sm'} class="text-base-400">Certified (hover for details)</Text>
+            </div>
+        </div>
+        <div class="p-16 flex flex-col gap-16">
+            {languages.map((language) => (
+                <LanguageItem
+                    name={language.data.name}
+                    level={language.data.level}
+                    certification={language.data.certification}
+                />
+            ))}
+        </div>
+    </div>
 </Section>

@@ -59,5 +59,14 @@ const skillsAndTools = defineCollection({
     })
 })
 
+const languages = defineCollection({
+    loader: file("src/content/skills-and-tools/languages.yaml"),
+    schema: z.object({
+        name: z.string().max(80),
+        level: z.enum(["Native", "C2", "C1", "B2", "B1", "A2", "A1"]),
+        certification: z.string().optional()
+    })
+})
 
-export const collections = { projects, blog, experience, education, skillsAndTools };
+
+export const collections = { projects, blog, experience, education, skillsAndTools, languages };
