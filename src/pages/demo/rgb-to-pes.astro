@@ -1,0 +1,29 @@
+---
+import DemoShell from "../../components/sections/demo/DemoShell.astro";
+---
+
+<DemoShell
+    title="RGB to PES Converter"
+    description="Browser demo of the RGB to PES Converter."
+    original="console"
+    includes="converting one value at a time."
+>
+    <form id="converter" class="flex flex-col gap-16">
+        <input id="rgb" class="bg-base-900 text-base-100 p-8" placeholder="e.g. 255, 128, 0" />
+        <button class="bg-base-900 text-base-100 p-8 self-start" type="submit">Convert</button>
+    </form>
+    <output id="result" class="text-base-100"></output>
+</DemoShell>
+
+<script>
+    import { convert } from "../../scripts/demos/rgb-to-pes";
+
+    const form = document.getElementById("converter") as HTMLFormElement;
+    const input = document.getElementById("rgb") as HTMLInputElement;
+    const result = document.getElementById("result") as HTMLOutputElement;
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        result.textContent = convert(input.value);
+    });
+</script>

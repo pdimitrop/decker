@@ -1,0 +1,20 @@
+---
+import Layout from "../../../layout/Layout.astro";
+import Section from "../../elements/Section.astro";
+import Text from "../../elements/Text.astro";
+import Link from "../../elements/Link.astro";
+
+const { title, description, original, includes } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+    <Section title="Demo" titleHeading={`${title}: trial version`}>
+        <div class="flex flex-col gap-16 text-base-400">
+            <Text variant={'normal'}>
+                This is a browser port of my {original} app, limited to: {includes}
+            </Text>
+            <Link variant={'inline'} href="/demo" text="← All demos" />
+        </div>
+        <slot />
+    </Section>
+</Layout>

@@ -1,0 +1,66 @@
+---
+import Layout from "../../layout/Layout.astro";
+import Section from "../../components/elements/Section.astro";
+import Heading from "../../components/elements/Heading.astro";
+import Text from "../../components/elements/Text.astro";
+import Link from "../../components/elements/Link.astro";
+import Tag from "../../components/elements/Tag.astro";
+
+type Demo = {
+    slug: string;
+    title: string;
+    original: string;            // what the real app is built with
+    includes: string;            // what the demo contains
+    status: "web" | "download" | "soon";
+    href?: string;               // only for status "download"
+};
+
+const demos: Demo[] = [
+    { slug: "diastema", title: "Diastema", original: "WinForms",
+      includes: "The player sprite and a single wave of enemies.", status: "soon" },
+    { slug: "football-kit-tool", title: "Football Kit Tool", original: "WPF",
+      includes: "One team per category: FIFA, Retro and Non-FIFA.", status: "soon" },
+    { slug: "futdraw", title: "FutDraw", original: "WinForms",
+      includes: "One group-mode draw and one knock-out draw.", status: "soon" },
+    { slug: "pes-clubs", title: "PES Clubs", original: "WinForms",
+      includes: "Browse 20 clubs.", status: "soon" },
+    { slug: "rgb-to-pes", title: "RGB to PES Converter", original: "Console",
+      includes: "Convert a single value.", status: "soon" },
+];
+---
+
+<Layout
+    title="Demo"
+    description="Trial versions of applications by Paraskevas I. Dimitropoulos."
+>
+    <Section title="Demo" titleHeading="Try things out before you read the source">
+        <Text variant={'normal'} class="text-base-400">
+            My apps are desktop programs, so these demos are trimmed versions
+            rebuilt for the browser (or, where noted, a Windows download).
+        </Text>
+        {demos.map((demo) => (
+            <div class="border-2 border-base-900">
+                <div class="bg-base-900 p-16 flex flex-col gap-16">
+                    <Heading tagName="h3" tagSize="h3">{demo.title}</Heading>
+                </div>
+                <div class="p-16 flex flex-col gap-16">
+                    <Text variant={'normal'} class="text-base-400">{demo.includes}</Text>
+                    <div class="flex flex-row gap-16 flex-wrap">
+                        <Tag title={`Original: ${demo.original}`} />
+                        {demo.status === "web" && <Tag title="Runs in browser" />}
+                        {demo.status === "download" && <Tag title="Windows download" />}
+                    </div>
+                    {demo.status === "web" && (
+                        <Link variant={'inline'} href={`/demo/${demo.slug}`} text="Launch demo" />
+                    )}
+                    {demo.status === "download" && demo.href && (
+                        <Link variant={'inline'} href={demo.href} text="Download trial" newWindow />
+                    )}
+                    {demo.status === "soon" && (
+                        <Text variant={'sm'} class="text-base-500">Coming soon</Text>
+                    )}
+                </div>
+            </div>
+        ))}
+    </Section>
+</Layout>
