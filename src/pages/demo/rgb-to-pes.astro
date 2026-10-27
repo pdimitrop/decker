@@ -6,10 +6,17 @@ import DemoShell from "../../components/sections/demo/DemoShell.astro";
     title="RGB to PES Converter"
     description="Browser demo of the RGB to PES Converter."
     original="console"
-    includes="converting one value at a time."
+    includes="converting the Red (R) value only, from 0 to 255."
 >
     <form id="converter" class="flex flex-col gap-16">
-        <input id="rgb" class="bg-base-900 text-base-100 p-8" placeholder="e.g. 255, 128, 0" />
+        <label for="rgb" class="text-base-400">Please enter the Red (R) Value:</label>
+        <input
+            id="rgb"
+            inputmode="numeric"
+            autocomplete="off"
+            class="bg-base-900 text-base-100 p-8"
+            placeholder="0–255"
+        />
         <button class="bg-base-900 text-base-100 p-8 self-start" type="submit">Convert</button>
     </form>
     <output id="result" class="text-base-100"></output>
